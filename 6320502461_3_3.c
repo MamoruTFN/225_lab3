@@ -3,7 +3,7 @@ int main()
 {
     int k;
     scanf("%d",&k);
-    for (int i=2;k>1;)
+    for (int i=2; k>1;)
     {
         if(k%i==0)
         {
@@ -11,11 +11,15 @@ int main()
             printf("%d\n",i);
         }
         else
-            {
-                i++;
-            }
+        {
+            i++;
+        }
+        if(k==1)
+        {
+            printf("0");
+        }
     }
-    printf("0");
+
 
     return 0;
 }
