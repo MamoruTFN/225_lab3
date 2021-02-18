@@ -1,39 +1,25 @@
 #include<stdio.h>
-
 int main()
 {
-    int n,i;
+    int n;
     scanf("%d",&n);
-    if(n>=1&&n<10000)
+    int p[48]={0},x=0,y=0,max=0,pr=0;
+    for(int i=0; i<n; i++)
     {
-        int a[n],b[n],max=0,p=0;
-
-        for (i=0; i<n; i++)
-        {
-            scanf("%d %d",&a[i],&b[i]);
-        }
-
-
-        for (i=0; i<n; i++)
-        {
-            if(a[i]>=1&&a[i]<48&&b[i]>=1&&b[i]<50000)
-            {
-                if(a[i]==a[i+1])
-                {
-                    b[i]+=b[i+1];
-                }
-                if(b[i]>max)
-                {
-                    max=b[i];
-                    p=i+1;
-                }
-            }
-
-        }
-
-
-        printf("%d %d",p,max);
+        scanf("%d %d",&x,&y);
+        p[x-1]+=y;
     }
+    for (int i=0;i<48;i++)
+    {
+
+        if(p[i]>max)
+        {
+            max=p[i];
+            pr=i+1;
+        }
+
+    }
+    printf("%d %d",pr,max);
 
     return 0;
 }
