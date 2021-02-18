@@ -3,7 +3,13 @@ int main()
 {
     int k;
     scanf("%d",&k);
-    for (int i=2; k>1;)
+    if(k==1)
+    {
+        printf("%d\n",k);
+    }
+    else
+    {
+        for (int i=2; k>1;)
     {
         if(k%i==0)
         {
@@ -14,13 +20,9 @@ int main()
         {
             i++;
         }
-        if(k==1)
-        {
-            printf("0");
-        }
-
-
     }
+    }
+    printf("%d",0);
 
 
     return 0;
