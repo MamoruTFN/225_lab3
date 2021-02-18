@@ -1,19 +1,26 @@
 #include<stdio.h>
 int main()
 {
-    int x,i=0,j;
-    scanf("%d" ,&x);
-    while(x>1)
+    unsigned long long a,i;
+    int q;
+    scanf("%llu",&a);
+    for(a;a>=0;a--)
     {
-        if((x%2==0||x%3==0||x%5==0||x%7==0)&&(x!=2&&x!=3&&x!=5&&x!=7))
+        q=1;
+        for(i=2;i<a;i++)
         {
-            x--;
+            if(a%i==0)
+            {
+                q=0;
+                break;
+            }
         }
-        else
+        if(q==1)
         {
-            printf("%d" ,x);
+            printf("%llu",a);
             break;
         }
+
     }
     return 0;
 }
