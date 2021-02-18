@@ -2,14 +2,19 @@
 
 int main()
 {
-    unsigned int n;
+    int n,i;
     scanf("%u",&n);
-    unsigned int a[n],b[n],max=0,p;
-    for (int i=0; i<n; i++)
+    if(n>=1&&n<10000)
     {
-        scanf("%d %d",&a[i],&b[i]);
+    int a[n],b[n],max=0,p=0;
+
+    for (i=0; i<n; i++)
+    {
+        scanf("%u %u",&a[i],&b[i]);
     }
-    for (int i=0;i<n;i++)
+    if(a[i]>=1&&a[i]<48&&b[i]>=1&&b[i]<50000)
+    {
+        for (i=0; i<n; i++)
     {
         if(a[i]==a[i+1])
         {
@@ -21,7 +26,12 @@ int main()
             p=i+1;
         }
     }
-    printf("%d %d",p,max);
+    }
+
+    printf("%u %u",p,max);
+    }
+
+
 
 
 
